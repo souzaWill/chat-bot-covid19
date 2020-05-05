@@ -1,0 +1,69 @@
+{"intents": [
+        {
+                "tag": "boas-vindas",
+                "patterns": ["Oi Susi","Oi", "Olá", "Como você está?", "Tem alguém ai?", "Bom dia", "Boa tarde","Boa noite", "Tudo bem?", "Olá, tudo bem?", "eai?"],
+                "responses": ["Olá! Sou o bot brasileiro de informações sobre o covid 19, O que você deseja saber?","Olá, sou a susi, como posso te ajudar?", "Olá sou a Susi, sua central de informações sobre o Coronavírus no Brasil!"],
+                "context_set": ""
+        },
+        {
+                "tag": "infectados",
+                "patterns": ["quantidade de infectados?", "infectados?", "contaminados?", "quantidade de contaminados?", "número de casos de infectados?", "casos?", "doentes?", "número de doentes?", "o número de contagio?", "contagio?", "qual o número de contagio?"],
+                "responses": ["O número de infectados é de", "O número de contaminados atualmente é de","O número de casos atuais de covid 19 é de", "A quantidade de contaminados é de", "O número atual de contaminados por covid 19 são de", "O número atual de contaminados é de", "O número atual de casos confirmados de covid 19 são de ", "O número atual de casos de contágio de covid 19 é de ", "O número de casos de coronavírus são de", "O número apurado de contagiados por covid 19 é de"],
+                "context_set": ""
+        },
+        {
+                "tag": "mortos",
+                "patterns": ["quantidade de obtidos?", "óbitos?", "mortos?", "quantidade de mortos?", "quantidade de mortos confirmados?", "quantidade de óbitos confirmados?", "número de fatalidades?", "número de fatalidades confirmadas?", "o número de fatalidade por corona vírus?", "fatalidade?", "número de falecidos?"],
+                "responses": ["A quantidade de óbitos são de", "O número de óbtidos atualmente são de","O número atual de mortos por covid 19 são de", "A quantidade de mortos é", "O número atual de fatelidades por covid 19 são de ", "O número atual de falecidos são de ", "O número atual de óbtidos confirmados do covid 19 são de", "O número atual de mortes por covid 19 são de", "O número de casos de mortos por covid 19 são de", "O número apurado de fatalidades por covid 19 é de "],
+                "context_set": ""
+        },
+        {
+                "tag": "recuperados",
+                "patterns": ["quantidade de recuperados?", "curados?", "recuperados?", "quantidade de curados?", "quantidade de recuperados confirmados?", "quantidade de curados confirmados?", "número de recuperados?", "número de revigorados confirmados?", "o número de recuperados por corona vírus?", "o número de curados por corona vírus?", "número de recuperados por covid 19 no brasil?"],
+                "responses": ["A quantidade de pessoas que conseguiram se recuperar do covid 19 são de", "A quantidade de curados do covid 19 é de", "A quantidade de pessoas recuperadas do covid 19 é de", "A quantidade de recuperados por covid 19 é de", "A quantidade de curados por covid 19 é", "A quantidade de revigorados por covid 19 são de", "A quantidade de curados por coronavírus é de","A quantidade de revigorados do coronavírus são de", "O número de curados por covid 19 é de", "O número de recuperados do covid 19 é de" ],
+                "context_set": ""
+        },
+        {
+                "tag": "sintomas",
+                "patterns": ["Quais são os sintomas?","Quais os sintomas do covid 19?","Quais os sintomas do coraonavírus?"],
+                "responses": ["Os sintomas típicos do Covid 19 são: Tosse, febre, cansaço e em casos graves dificuldades respiratórias"],
+                "context_set": ""
+        },
+        {
+                "tag": "prevenir",
+                "patterns": ["Como me previnir?", "Como posso me previnir?", "Como posso me previnir contra o coronavírus?", "Como posso me previnir contra o covid19?"],
+                "responses": ["Lavar às mãos com frequência, usar sempre máscara, evitar sair de casa, manter uma distância segura das pessoas, não levar às mãos ao rosto e cobrir sempre a tosse com o cotovelo"],
+                "context_set": ""
+        },
+        {
+                "tag": "o que e",
+                "patterns": ["O que é covid19?","O que é o coronavírus?","O que é o coronavírus 2020?","O que é coronavírus 2019?"],
+                "responses": ["Coronavírus é uma família de vírus que causam infecções respiratórias, já  a COVID-19 é uma doença causada pelo coronavírus SARS-CoV-2, que apresenta um quadro clínico que varia de infecções assintomáticas a quadros respiratórios graves"],
+                "context_set": ""
+        },
+        {
+                "tag": "transmissao",
+                "patterns": ["Como o coronavírus é transmitido?", "Como o covid19 é transmitido? ","Como funciona sua transmissão?","Como é transmitido o coronavírus?","Como é transmitido o covid19?"],
+                "responses": ["Ele é transmitido através de toques e apertos de mãos, Gotículas de saliva, Espirro, Tosse, Catarro e por objetos ou superfícies contaminadas"],
+                "context_set": ""
+        },
+        {
+                "tag": "e se eu ficar doente",
+                "patterns": ["E se eu ficar doente?","E se eu pegar covid19?","E se eu pegar coronavírus?"," E se eu estiver infectado?","E se eu estiver doente?"],
+                "responses": ["Fique em isolamento domiciliar, Utilize máscara o tempo todo e lembre-se  só deve ir ao hospital quem estiver se sentindo muito mal, com sintomas mais graves como dificuldade para respirar e febre alta (a partir de 39°C)"],
+                "context_set": ""
+        },
+        {
+                "tag": "zoio",
+                "patterns": ["imita o zoio", "garai", "o uh alek"],
+                "responses": ["garai, o bagui e hardcore"],
+                "context_set": ""
+        },
+        {
+                "tag": "ate-mais",
+                "patterns": ["Obrigado!", "tchau", "xau", "sair", "ate mais", "bye"],
+                "responses": ["Tchau tchau, fique em casa!", "Lembre-se sempre de lavar às mãos em!"],
+                "context_set": ""
+        }
+   ]
+}
