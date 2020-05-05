@@ -13,9 +13,9 @@ import requests
 
 #pega dados da api
 def getAll():
-  data = requests.get('https://covid19-brazil-api.now.sh/api/report/v1/brazil')
-  json = data.json()
-  return json['data']
+  r = requests.get('https://covid19-brazil-api.now.sh/api/report/v1/brazil')
+  re = r.json()
+  return re['data']
 
 #cria o audio e salva na pasta audios e executa
 def cria_audio(text,lang):
@@ -146,28 +146,28 @@ def chat():
         bag_usuario = bag_of_words(inp, stemmed_words)
         results = model.predict([bag_usuario])
 
-        valor = Validar(results)
+        valor = validate(results)
         if (valor != True):
           cria_audio("não entendi sua pergunta, tente novamente",'pt-br')
         else:
           results_index = np.argmax(results)
           tag = intencoes[results_index]
-          
+
           for tg in data["intents"]:
               if tg['tag'] == tag:
                   if tag == "mortos":
                     responses = tg['responses']
-                    number = data['deaths']
+                    number = api_data['deaths']
                     cria_audio(random.choice(responses),'pt-br')
                     cria_audio(str(number),'pt-br')
                   elif tag == "infectados":
                     responses = tg['responses']
-                    number = data['confirmed']
+                    number = api_data['confirmed']
                     cria_audio(random.choice(responses),'pt-br')
                     cria_audio(str(number),'pt-br')
                   elif tag == "recuperados":
                     responses = tg['responses']
-                    number = data['recovered']
+                    number = api_data['recovered']
                     cria_audio(random.choice(responses),'pt-br')
                     cria_audio(str(number),'pt-br')
                   else:
@@ -176,16 +176,16 @@ def chat():
           if tag == "ate-mais":
             Online = False
 
-def Validar(prob):
+def validate(prob):
    maiorResul = prob.max()
-#    print(maiorResul)
-   if maiorResul < 0.16: #usei 0.24 e rodou bem
+   print(maiorResul)
+   if maiorResul > 0.23:
      return True
    else:
      return False
 
 
-data = getAll()
+api_data = getAll()
 chat()
 
 
