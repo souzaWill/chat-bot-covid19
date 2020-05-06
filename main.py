@@ -111,7 +111,7 @@ tf.reset_default_graph()
 # camada de entrada
 net = tfl.input_data(shape=[None, len(training[0])])
 # oito neuronios por camada oculta
-net = tfl.fully_connected(net, 8)
+net = tfl.fully_connected(net, 16)
 # camada de saida
 net = tfl.fully_connected(net, len(output[0]), activation="softmax")
 # 
@@ -121,7 +121,7 @@ net = tfl.regression(net)
 model = tfl.DNN(net)
 
 #treinando modelo
-model.fit(training, output, n_epoch=100, batch_size=8, show_metric=False)
+model.fit(training, output, n_epoch=200, batch_size=16, show_metric=False)
 model.save("./model/model.chatbot30G")
 
 def bag_of_words(s, words):

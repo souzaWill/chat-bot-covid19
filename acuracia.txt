@@ -1,0 +1,7 @@
+            Neuronios   Epochs  batch_size  acuracia
+1° teste -> 8           100     8           0.4852
+2° teste -> 16          200     16          0.6405
+3° teste -> 32          400     32          0.5995
+4° teste -> 64          800     64          0.4856
+
+frase="o Número de infectados por Covid 19?"
